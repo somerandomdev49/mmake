@@ -14,7 +14,7 @@ $ ./mmake # self-build, check for validity
 $ sudo ln -s $(realpath ./mmake) /usr/local/bin/mmake # optional, install to /usr/local
 ```
 
-# Using
+## Using
 In your project directory a file called `mmake.lua` should exist for mmake to work. To build, simply run `mmake`.
 
 Example `mmake.lua` for some project you might have
@@ -44,6 +44,6 @@ project "My Cool Game II" -- another project
   bin "mcg2"
 ```
 
-# TODO:
+## TODO:
 - Choose which project to build from command line arguments e.g. `mmake -p docs`
 - Set the filepath in the command line arguments e.g. `mmake -f ../mmake2.lua`
