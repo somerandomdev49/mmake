@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <mglob.h>
+#include <tinydir.h>
 #include <lua5.3/lauxlib.h>
 #include <lua5.3/lualib.h>
 #include <lua5.3/lua.h>
