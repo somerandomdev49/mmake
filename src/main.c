@@ -441,7 +441,13 @@ void build_project(int i)
 	else if(strcmp(P->kind, "static library") == 0)
 	{
 		create_dir(P->bin_dir);
+#if defined(DRAWIN)
 		Dyns_concat(&cmd, "libtool -static -o ");
+#elif defined(__linux__)
+		Dyns_concat(&cmd, "ar -rcs ");
+#else
+#pragma error "Bruh"
+#endif
 		Dyns_concat(&cmd, P->bin_dir);
 		if(P->bin_dir[strlen(P->bin_dir)-1] != '/') Dyns_concat(&cmd, "/");
 		Dyns_concat(&cmd, P->bin);
